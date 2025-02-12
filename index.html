@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Validation in JS</title>
+    </head>
+
+    <body>
+
+    </body>
+    <form name="myFor" onsubmit="validateForm(event)">
+        Name: <input type="text" name="frame">
+        <input type="submit" value="Submit">
+        <p id="message"></p>
+    </form>
+
+    <script>
+        function validateForm(event) {
+            // Prevent the default form submission behaviour
+            event.preventDefault();
+
+            var name = document.forms["myForm"][|"frame"].value;
+            if (name=== "") {
+                alert("You're supposed to write your name, you can't leave it blank.");
+                return false;
+            }
+
+            else {
+
+                document.getElementById("message").innerHTML = "Name submitted: " + name;
+
+            }
+        }
+    </script>
+    </body>
+</html>
